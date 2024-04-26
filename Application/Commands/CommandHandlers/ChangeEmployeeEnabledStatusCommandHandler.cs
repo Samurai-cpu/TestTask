@@ -12,7 +12,6 @@ namespace Application.Commands.CommandHandlers
             _configuration = configuration;
         }
 
-        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=taskdb;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
         public async Task Handle(ChangeEmployeeEnabledStatusCommand request, CancellationToken cancellationToken)
         {
             using (var connection = new SqlConnection(_configuration["ConnectionString"]))
